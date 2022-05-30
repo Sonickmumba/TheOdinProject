@@ -1,0 +1,24 @@
+
+.number1{
+    background-color: pink;
+    font-family: Verdana, Dejavu sans, sans-serif;
+}
+#number2 {
+    color: blue;
+    font-size: 36px;
+}
+.number3 {
+    font-size: 24px;
+    background-color: pink;
+    font-family: Verdana, Dejavu sans, sans-serif;
+}
+#number4 {
+    background-color: green;
+    font-size: 24;
+    font-weight: bold;
+}
+
+.number5 {
+    background-color: pink;
+    font-family: Verdana, Dejavu sans, sans-serif;
+}
