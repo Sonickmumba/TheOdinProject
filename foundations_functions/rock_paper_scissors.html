@@ -1,58 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock- Paper- Scissors</title>
-</head>
-<body>
-    <script>
-        function computer_play (list) {
-            return list[Math.floor((Math.random()*list.length))];
-        }
-        function playRound(computerSelection, playerSelection){
-            if (computerSelection === playerSelection){
-                return "A Tie";
-            }else if ((computerSelection === 'rock' && playerSelection === 'scissors') || (computerSelection === 'scissors' && playerSelection === 'paper')
-            || (computerSelection === 'paper' && playerSelection === 'rock') 
-            ){
-                return 'You Lose!';
-            }else {
-                return 'You Win!';
-            }
-        }
-        
-        function game(){
-            const options = ['rock', 'paper', 'scissors'];
-            let computerScore = 0;
-            let playerScore = 0;
-            const rounds = Number(prompt("How round do you want? 1 to 10: "));
-            for (let i=0; i < rounds; i++){
-                let computerSelection = computer_play(options);
-                let playerSelection = prompt("Paper ✋🏼, Rock 👊🏼 or Scissors ✌🏼? ").trim().toLowerCase();
-                let winner = playRound(computerSelection, playerSelection);
-                if (winner === 'You Lose!'){
-                    computerScore++;
-                    console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
-                }else if (winner === 'You Win!'){
-                    playerScore++;
-                    console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
-                }else {
-                    console.log("A Tie");
-                }
-            }
-            console.log(`computer scores: ${computerScore}`);
-            console.log(`Your score is: ${playerScore}`);
-            if (computerScore > playerScore){
-                return 'You Lose! 🤪 🤪 🤪';
-            }else if (computerScore < playerScore){
-                return 'Congratulations!!! You Win! 😍 😍 😍';
-            }else {
-                return "DRAW play again";
-            }
-        }
-        console.log(game());
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock- Paper- Scissors</title>
+        <script src="rock_paper_scissors.js" defer></script>
+    </head>
+    <body>
+        <div class = "container">
+            <h1>The game of Rock, Paper and Scissors</h1>
+        </div>
+        <div class="mum">
+            <!-- <button type="button" class="button"></button> -->
+        </div>
+    
+    </body>
 </html>
